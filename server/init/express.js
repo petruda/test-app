@@ -10,7 +10,7 @@ module.exports = (app, config)=> {
     timeout = require('express-timeout-handler');
 
   const options = {
-    timeout: 27000,
+    timeout: 11000,
     onTimeout: function (req, res) {
       res.status(503).end();
     }

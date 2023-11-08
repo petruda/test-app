@@ -1,0 +1,33 @@
+<div class='modal-header'>
+    <h4 class='modal-title'>{{id_person ? 'Modificare' : 'Adăugare'}} informație</h4>
+  </div>
+  
+  <div class='modal-body'>
+    <div class='row'>
+      <label class='col-2 control-label'>Nume & Prenume*</label>
+      <div class='col-9'>
+        <input [(ngModel)]='modal.name' class='form-control' placeholder='Nume' maxlength='200' />
+      </div>
+      <div class='col-9'>
+        <input [(ngModel)]='modal.name' class='form-control' placeholder='Prenume' maxlength='200' />
+      </div>
+    </div>
+    <div class='row'>
+        <label class='col-2 control-label'>CNP*</label>
+        <div class='col-9'>
+          <input [(ngModel)]='modal.cnp' class='form-control' placeholder='CNP' maxlength='13' />
+        </div>
+      </div>
+    
+    <div class='row'>
+      <label class='col-2 control-label'>Varsta</label>
+      <div class='col-4'>
+        <input type='number' [(ngModel)]='modal.age' class='form-control' placeholder='Tip...' maxlength='3' />
+      </div>
+      <div class='col-1'>
+    </div>
+  </div>
+  <div class='modal-footer'>
+    <button type='button' class='btn btn-outline-dark' (click)='activeModal.dismiss()'>Renunță</button>
+    <button type='button' class='btn btn-success' (click)='save()'>Salvează</button>
+  </div>

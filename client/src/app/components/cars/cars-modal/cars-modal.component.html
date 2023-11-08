@@ -1,0 +1,42 @@
+
+<div class='modal-header'>
+    <h4 class='modal-title'>{{id_car ? 'Modificare' : 'Adăugare'}} informație</h4>
+  </div>
+  
+  <div class='modal-body'>
+    <div class='row'>
+      <label class='col-2 control-label'>Denumire marcă</label>
+      <div class='col-9'>
+        <input [(ngModel)]='modal.name' class='form-control' placeholder='Denumire marcă' maxlength='100' />
+      </div>
+    </div>
+    <div class='row'>
+        <label class='col-2 control-label'>Anul fabricației</label>
+        <div class='col-9'>
+          <input [(ngModel)]='modal.year' class='form-control' placeholder='Anul fabricației' maxlength='100' />
+        </div>
+      </div> <div class='row'>
+        <label class='col-2 control-label'>Capacitatea cilindrică</label>
+        <div class='col-9'>
+          <input [(ngModel)]='modal.capacity' class='form-control' placeholder='Capacitatea cilindrică' maxlength='100' />
+        </div>
+      </div> <div class='row'>
+        <label class='col-2 control-label'>Taxa de impozit</label>
+        <div class='col-9'>
+          <input [(ngModel)]='modal.tax' class='form-control' placeholder='Taxa de impozit' maxlength='100' />
+        </div>
+      </div>
+
+
+    <div class='row'>
+      <label class='col-2 control-label'>Denumire model</label>
+      <div class='col-4'>
+        <input type='text' [(ngModel)]='modal.model' class='form-control' placeholder='Denumire model'/>
+      </div>
+    </div>
+  </div>
+  
+  <div class='modal-footer'>
+    <button type='button' class='btn btn-outline-dark' (click)='activeModal.dismiss()'>Renunță</button>
+    <button type='button' class='btn btn-success' (click)='save()'>Salvează</button>
+  </div>
